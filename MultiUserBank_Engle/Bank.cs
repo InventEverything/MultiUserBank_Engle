@@ -9,7 +9,7 @@ namespace MultiUserBank_Engle
     public class Bank
     {
         private decimal _vault = 10000;
-        private int _loggedIn=5;
+        private int _loggedIn = 5;
         private string[,] _users = new string[4, 3]
         {
             {"jlennon", "johnny", "1250" },
@@ -27,7 +27,6 @@ namespace MultiUserBank_Engle
                     return username;
                 }
             }
-            _loggedIn=5;
             return "Invalid credentials\n";
         }
         public string Balance
@@ -67,5 +66,10 @@ namespace MultiUserBank_Engle
         {
             get { return _vault; }
         }
+        public void LogOut()
+        {
+            _loggedIn = 5;
+        }
+
     }
 }

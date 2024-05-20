@@ -71,6 +71,7 @@ namespace MultiUserBank_Engle
                 {
                     Console.Clear();
                     Console.WriteLine("Bank cash on hand: " + Account.BankBalance.ToString("C")+"\n");
+                    Account.LogOut();
                     break;
                 }
                 else
